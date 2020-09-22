@@ -14,25 +14,25 @@ app.get('/', (req, res) => {
   res.send(readFileSync(`./src/static/index.html`).toString())
 })
 
-app.get('/about', (req, res) => {
+app.get('/about.html', (req, res) => {
   console.log('get')
   res.send(readFileSync(`./static/about.html`).toString())
 })
 
-app.get('/search', (req, res) => {
+app.get('/search.html', (req, res) => {
   console.log('search:GET')
   const output = build()
   res.send(search_template.render(output.metadata).toString())
 })
 
-app.get('/list', (req, res) => {
+app.get('/list.html', (req, res) => {
   console.log('list')
   const output = build()
   console.log(output)
   res.send(list_template.render(output.metadata).toString())
 })
 
-app.get('/:id', (req, res) => {
+app.get('/:id.html', (req, res) => {
   const recipes = readdirSync('./src/recipes')
   const settings = require(`./recipes/${recipes[parseInt(req.params.id)]}`)
   res.send(template.render(settings).toString())
