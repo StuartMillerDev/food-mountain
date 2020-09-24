@@ -34,9 +34,10 @@ module.exports = {
     ],
     instructions: [
       'Prepare ingredients ahead of cooking, dice onions, crush garlic and wash/rinse chicken.',
-      'Add oilive oil to cast iron pan and heat till oil begins to vapor. Add onions and stir to sweat onions.',
+      'Add olive oil to cast iron pan and heat till oil begins to vapor. Add onions and stir to sweat onions.',
       'Add garlic to onions and add seasonings. Mix until color is well balanced. Add rice ontop of onions and mix allowing the rice to soak up all the flavors.',
-      'Add enough chicken stock to cover rice and boil.'
+      'Add enough chicken stock to cover rice and boil and allow to reduce then fill again until rice is tender.',
+      'Cook chicken in a seperate pan, add salt and pepper to taste. Slice chicken and place on top of risotto and serve.'
     ],
     equipment:{
       required:[

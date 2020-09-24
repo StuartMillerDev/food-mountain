@@ -15,40 +15,21 @@ app.get('/', (req, res) => {
 })
 
 app.get('/about.html', (req, res) => {
-<<<<<<< HEAD
-  console.log('get')
-  res.send(readFileSync(`./static/about.html`).toString())
-})
-
-app.get('/search.html', (req, res) => {
-  console.log('search:GET')
-=======
   res.send(readFileSync(`./src/static/about.html`).toString())
 })
 
 app.get('/search.html', (req, res) => {
->>>>>>> upstream/develop
   const output = build()
   res.send(search_template.render(output.metadata).toString())
 })
 
 app.get('/list.html', (req, res) => {
-<<<<<<< HEAD
-  console.log('list')
-=======
->>>>>>> upstream/develop
   const output = build()
   res.send(list_template.render(output.metadata).toString())
 })
 
-<<<<<<< HEAD
-app.get('/:id.html', (req, res) => {
-  const recipes = readdirSync('./src/recipes')
-  const settings = require(`./recipes/${recipes[parseInt(req.params.id)]}`)
-=======
 app.get('/:slug', (req, res) => {
   const settings = require(`./recipes/${req.params.slug.replace('.html', '')}.js`)
->>>>>>> upstream/develop
   res.send(template.render(settings).toString())
 })
 
