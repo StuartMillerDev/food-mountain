@@ -53,8 +53,7 @@ module.exports = {
     },
     tags: [
       "Cast-Iron",
-      "Chicken",
-      ""
+      "Chicken"
       
     ]
   }
